@@ -10,18 +10,16 @@ import java.sql.SQLException;
 @Setter
 @Getter
 public class AggregatedByEvents implements RowMapper<AggregatedByEvents> {
-    private String name;
+    private String event;
     private int number;
 
     @Override
     public AggregatedByEvents mapRow(ResultSet rs, int rowNum) throws SQLException {
         AggregatedByEvents result = new AggregatedByEvents();
-        result.setName(rs.getString("name"));
+        result.setEvent(rs.getString("name"));
         result.setNumber(rs.getInt("number"));
         return result;
     }
 
-    public String toString() {
-        return name + ":" + number;
-    }
+
 }
