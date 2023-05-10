@@ -10,11 +10,10 @@ import javax.sql.DataSource;
 @Configuration
 public class ApplicationConfig {
     @Bean
-    DataSource dataSource()
-    {
+    DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/vk");
+        dataSource.setUrl("jdbc:postgresql://postgresql:5432/vk");
         dataSource.setUsername("username");
         dataSource.setPassword("password");
 
@@ -22,14 +21,12 @@ public class ApplicationConfig {
     }
 
     @Bean
-    JdbcTemplate jdbcTemplate()
-    {
+    JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
 
     @Bean
-    String tableName()
-    {
+    String tableName() {
         return "vk";
     }
 }

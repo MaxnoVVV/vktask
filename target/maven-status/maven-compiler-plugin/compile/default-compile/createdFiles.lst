@@ -1,0 +1,8 @@
+org\vk\api\dto\AggregatedByEvents.class
+org\vk\api\repository\jdbc\UsersRepository.class
+org\vk\api\dto\AggregatedByStatus.class
+org\vk\api\Application.class
+org\vk\api\config\ApplicationConfig.class
+org\vk\api\controller\Api.class
+org\vk\api\dto\AggregatedByIp.class
+org\vk\api\dto\Event.class
